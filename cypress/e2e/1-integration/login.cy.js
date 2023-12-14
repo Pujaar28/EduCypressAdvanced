@@ -34,5 +34,7 @@ describe('Login/Logout test',()=>{
         cy.contains('username').click()
         cy.get('#logout_link').click()
         cy.get('#signin_button').should('be.visible')
-    })
+        cy.get('#homeMenu > div > strong').should('be.visible')
+        cy.get('#online_banking_features').should('be.visible')
+     })
 })
